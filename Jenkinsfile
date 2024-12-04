@@ -1,6 +1,8 @@
 pipeline {
     agent any
-    stage('build docker image'){
+
+    stages {
+        stage('build docker image'){
         steps{
             sh 'docker build -t devops/app .'
         }
@@ -23,4 +25,5 @@ pipeline {
             sh 'test-app.sh'
         }
     }
+  }
 }

@@ -21,7 +21,7 @@ pipeline {
         }
 
         stage('application test'){
-        stepś{
+        steps{
             sh 'test-app.sh'
             }
         }

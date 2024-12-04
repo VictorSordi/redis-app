@@ -1,5 +1,5 @@
 #!/bin/bash
-RESULT="`wget -qO- http://localhost:8090`"
+RESULT="`wget http://localhost:8090`"
 echo "RESULT: $RESULT"  # Debugging line to print the result
 wget -q localhost:8090
 if [ $? -eq 0 ]

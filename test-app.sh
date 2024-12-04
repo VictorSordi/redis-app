@@ -4,10 +4,10 @@ wget -q localhost:8090
 if [ $? -eq 0 ]
 then
     echo 'Ok - service ON'
-elif [[ $RESULT == *"Number"* ]]
+elif [ "$RESULT" = *"Number"* ]
 then
     echo 'OK - number of visits'
-    echo $RESULT
+    echo "$RESULT"
 else
     echo 'OFF - number of visits'
     exit 1

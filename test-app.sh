@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 RESULT="`wget -qO- http://localhost:8090`"
 wget -q localhost:8090
 if [ $? -eq 0 ]

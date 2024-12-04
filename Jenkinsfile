@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('build docker image'){
         steps{
-            sh 'echo "vagrant" | sudo -S docker build -t devops/app .'
+            sh 'echo "jenkins" | sudo -S docker build -t devops/app .'
             //sh 'docker build -t devops/app .'
             }
         }

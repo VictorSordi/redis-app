@@ -1,7 +1,7 @@
 #!/bin/bash
-RESULT="`wget http://localhost:8070`"
+RESULT="`wget -qO- http://localhost:8060`"
 echo "RESULT: $RESULT"  # Debugging line to print the result
-wget -q localhost:8070
+wget -q localhost:8060
 if [ $? -eq 0 ]
 then
     echo 'Ok - service ON'

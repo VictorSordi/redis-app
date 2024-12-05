@@ -29,7 +29,6 @@ pipeline {
                 withSonarQubeEnv('sonar-server'){
                     withCredentials([string(credentialsId: 'a91750a6a2714f85c727aaf722e627700082b9f4', variable: 'SONAR_AUTH_TOKEN')]) {
                         sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=redis-app -Dsonar.sources=. -Dsonar.host.url=${env.SONAR_HOST_URL} -Dsonar.login ${env.SONAR_AUTH_TOKEN}"
-
                     }
                 }
             }
